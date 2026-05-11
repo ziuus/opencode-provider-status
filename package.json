@@ -1,0 +1,46 @@
+{
+  "name": "opencode-provider-status",
+  "version": "1.0.0",
+  "description": "OpenCode plugin that checks availability and quota of all AI providers (Copilot, Ollama, OpenRouter, Antigravity, OpenAI)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "license": "MIT",
+  "author": "ziuus",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ziuus/opencode-provider-status.git"
+  },
+  "keywords": [
+    "opencode",
+    "provider",
+    "status",
+    "quota",
+    "routing",
+    "ai",
+    "plugin"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "oc-plugin": [
+    "server"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@opencode-ai/plugin": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
