@@ -11,7 +11,7 @@ async function runProviderStatus(force: boolean = false): Promise<string> {
   const flag = force ? "--json" : "--json";
   try {
     const { stdout } = await execAsync(`${PROVIDER_STATUS_SCRIPT} ${flag}`, {
-      timeout: 15_000,
+      timeout: 30_000,
     });
     return stdout;
   } catch (err: any) {
